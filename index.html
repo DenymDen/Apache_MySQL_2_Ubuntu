@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OZON</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        color: #001a34;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .main_form {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .main_section {
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTUyMHB4IiBoZWlnaHQ9IjkwMHB4IiB2aWV3Qm94PSIwIDAgMTUyMCA5MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYxLjIgKDg5NjUzKSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5XZWIg4oCUIE96b24gSUQg4oCUIEF1dGggIENvcHkgNUAyeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJXZWIt4oCULU96b24tSUQt4oCULUF1dGgtLUNvcHktNSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHJlY3QgZmlsbD0iI0ZGRkZGRiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE1MjAiIGhlaWdodD0iOTAwIj48L3JlY3Q+CiAgICAgICAgPHBhdGggZD0iTTE3MTQuMDA2OTIsLTI3OCBDMTE0OS4wMTY3NSwtMjc4IDY5MSw0OS4wNTA5Mzc1IDY5MSw0NTIuNSBDNjkxLDg1NS45MzUyMjcgMTE0OS4wMTY3NSwxMTgzIDE3MTQuMDA2OTIsMTE4MyBDMjI3OC45ODMyNSwxMTgzIDI3MzcsODU1LjkzNTIyNyAyNzM3LDQ1Mi41IEMyNzM3LDQ5LjA1MDkzNzUgMjI3OC45ODMyNSwtMjc4IDE3MTQuMDA2OTIsLTI3OCBaIE0xNzE0LjAwNjkyLDYyLjk1NTM0MDkgQzIxMDQuMzMzMzIsNjIuOTU1MzQwOSAyMzk1Ljk4ODQ3LDI2OC42MTU5OTQgMjM5NS45ODg0Nyw0NTIuNSBDMjM5NS45ODg0Nyw2MzYuMzg0MDA2IDIxMDQuMzMzMzIsODQyLjA0NDY1OSAxNzE0LjAwNjkyLDg0Mi4wNDQ2NTkgQzEzMjMuNjY2NjgsODQyLjA0NDY1OSAxMDMyLjAxMTUzLDYzNi4zODQwMDYgMTAzMi4wMTE1Myw0NTIuNSBDMTAzMi4wMTE1MywyNjguNjE1OTk0IDEzMjMuNjY2NjgsNjIuOTU1MzQwOSAxNzE0LjAwNjkyLDYyLjk1NTM0MDkgTDE3MTQuMDA2OTIsNjIuOTU1MzQwOSBaIiBpZD0ibG9nbyIgZmlsbD0iI0NDREVGRiIgZmlsbC1ydWxlPSJub256ZXJvIiBvcGFjaXR5PSIwLjUiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+');
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px;
+        overflow: auto;
+    }
+
+    .authorization_section {
+        background: #fff;
+        width: 416px;
+        padding: 32px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+        margin: 110px auto auto;
+    }
+
+    .authorization_section_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 0 4px;
+    }
+
+    .authorization_section_logo {
+        width: 130px;
+        height: 21px;
+    }
+
+    .authorization_section_phone_text {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .authorization_section_phone_text_span {
+        padding: 40px 0 16px;
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+    .authorization_section_text {
+        margin-bottom: 28px;
+    }
+
+    .authorization_input {
+        background-color: #fff;
+        border: 2px solid #b3bcc5;
+        border-radius: 6px;
+        color: #001a34;
+        display: flex;
+        padding: 7px 6px;
+    }
+
+    .authorization_input:hover {
+        border-color: #005bff;
+    }
+
+    .authorization_input_code {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(14, 50, 103, .04);
+        border: 0;
+        border-radius: 6px;
+        width: 91px;
+        height: 46px;
+        padding: 0 8px;
+    }
+
+    .authorization_input_phone {
+        border: 0;
+        width: 100%;
+        font-size: 16px;
+        color: #34495d;
+        padding: 0 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .authorization_input_phone:focus {
+        outline: #fff;
+        border-color: #fff;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #96a3ae;
+    }
+
+    :-moz-placeholder {
+        color: #96a3ae;
+    }
+
+    ::-moz-placeholder {
+        color: #96a3ae;
+    }
+
+    :-ms-input-placeholder {
+        color: #96a3ae;
+    }
+
+    .authorization_button {
+        width: 100%;
+        background: #005bff;
+        color: #fff;
+        padding: 20px 28px;
+        border-radius: 12px;
+        border: #005bff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 22px 0 16px;
+    }
+
+    .authorization_button:hover {
+        background: #1c6bff;
+        border: #1c6bff;
+    }
+
+    .authorization_section_block_or {
+        font-size: 14px;
+        color: #001a3466;
+        position: relative;
+        text-align: center;
+    }
+
+    .authorization_section_block_or::after,
+    .authorization_section_block_or::before {
+        background-color: rgba(0, 26, 52, .2);
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 13px;
+        width: 64px;
+    }
+
+    .authorization_section_block_or::before {
+        left: 88px;
+    }
+
+    .authorization_button_gos {
+        font-family: Arial;
+        width: 100%;
+        background: #f5f7fa;
+        color: #070707;
+        padding: 16px 0;
+        border-radius: 12px;
+        border: #f5f7fa;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 16px 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .authorization_button_gos:hover {
+        background: #d8d9dc;
+        border: #d8d9dc;
+    }
+
+    .authorization_button_email {
+        font-family: Arial;
+        background: #fff;
+        color: #1c6bff;
+        border: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 16px auto 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1px 6px;
+    }
+
+    .authorization_button_email:hover {
+        color: #3a7fff;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding: 0 100px;
+    }
+
+
+    .footer_links {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        font-size: 14px;
+        color: #005bff;
+    }
+
+    .footer_links_text:hover {
+        color: #0042bc;
+    }
+
+    @media (max-width: 600px) {
+
+        .footer {
+            justify-content: center;
+            padding: 0;
+        }
+
+        .main_section {
+            padding: 24px 5px;
+        }
+
+    }
+
+    @media (max-width: 470px) {
+
+        .footer_links {
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .main_section {
+            padding: 15px 5px;
+        }
+
+        .authorization_section {
+            margin: auto auto;
+            width: 100%;
+        }
+
+        .authorization_section_block_or::after,
+        .authorization_section_block_or::before {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 300px) {
+
+        .authorization_section_phone_text_span {
+            font-size: 20px;
+            padding: 16px 0;
+        }
+
+        .authorization_input_code {
+            padding: 0 3px;
+
+        }
+
+        .authorization_input_phone {
+            padding: 0 5px;
+        }
+    }
+</style>
+
+<body>
+    <form class="main_form">
+        <div class="main_section">
+            <div class="authorization_section">
+                <div class="authorization_section_block">
+                    <a href="https://www.ozon.ru/">
+                        <img class="authorization_section_logo" alt=""
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjkuNDMgNTMiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA1YmZmO30uY2xzLTJ7ZmlsbDojMDAxYTM0O308L3N0eWxlPjwvZGVmcz48dGl0bGU+T3pvbl9pZDwvdGl0bGU+PGcgaWQ9IkxheWVyXzEiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNODEuNyw5My41MkExNC4xNCwxNC4xNCwwLDEsMCw2NS43Nyw3Ny42NiwxNC4yLDE0LjIsMCwwLDAsODEuNyw5My41MlptLjg2LTQwLjM5QTI2LjUxLDI2LjUxLDAsMSwxLDUzLjM3LDgyLjIsMjYuNjUsMjYuNjUsMCwwLDEsODIuNTYsNTMuMTNabTM4LjA1LDFoMzlBMS43OCwxLjc4LDAsMCwxLDE2MSw1N0wxMzQsOTIuNDVoMjEuMTJhNi4yLDYuMiwwLDAsMSw2LjA4LDcuNDYsNi4zNiw2LjM2LDAsMCwxLTYuMzIsNC45SDExMi42MUExLjc2LDEuNzYsMCwwLDEsMTExLjIsMTAybDI3LTM1LjQzSDEyMC44NGE2LjM1LDYuMzUsMCwwLDEtNi4zMS00LjkxQTYuMiw2LjIsMCwwLDEsMTIwLjYxLDU0LjE4Wm0xNjkuMDYuMTRhNi4yMSw2LjIxLDAsMCwxLDcuNTYsNlYxMDNhMS43OCwxLjc4LDAsMCwxLTIuODksMS4zOUwyNjAuNzMsNzcuODhWOTguNjRhNi4yLDYuMiwwLDAsMS03LjU2LDYsNi4yOCw2LjI4LDAsMCwxLTQuODYtNi4yVjU2YTEuNzksMS43OSwwLDAsMSwyLjktMS40bDMzLjYxLDI2LjU1VjYwLjUzQTYuMjksNi4yOSwwLDAsMSwyODkuNjcsNTQuMzJaTTIwMi4xNyw1M2MyMC41NywwLDM3LjI1LDExLjg2LDM3LjI1LDI2LjQ5UzIyMi43NCwxMDYsMjAyLjE3LDEwNnMtMzcuMjYtMTEuODctMzcuMjYtMjYuNVMxODEuNTksNTMsMjAyLjE3LDUzWm0wLDEyLjM3Yy0xNC4yMiwwLTI0Ljg0LDcuNDUtMjQuODQsMTQuMTJTMTg4LDkzLjYyLDIwMi4xNyw5My42MiwyMjcsODYuMTYsMjI3LDc5LjQ5LDIxNi4zOCw2NS4zNywyMDIuMTcsNjUuMzdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTMuMjMgLTUzKSIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTMyOS40NiwxMDQuNzZoLTcuNjlWNTRoNy42OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01My4yMyAtNTMpIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzgyLjY2LDc5LjM2YzAsMTUuODItMTEsMjUuNC0yNS41NSwyNS40aC0xNi40VjU0aDE2LjRDMzcxLjcsNTQsMzgyLjY2LDYzLjU0LDM4Mi42Niw3OS4zNlptLTM0LjQtMTguMjlWOTcuNjVIMzU3YzkuOTQsMCwxNy4zNS02LjMyLDE3LjM1LTE4LjI5UzM2Nyw2MS4wNywzNTcsNjEuMDdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTMuMjMgLTUzKSIvPjwvZz48L3N2Zz4=">
+                    </a>
+                    <div class="authorization_section_phone_text">
+                        <span class="authorization_section_phone_text_span">Введите номер телефона</span>
+                    </div>
+                    <div class="authorization_section_text">
+                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно. Код может прийти на почту или в
+                            СМС</span>
+                    </div>
+                    <div class="authorization_input">
+                        <div class="authorization_input_code">
+                            <img alt=""
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgY2xhc3M9ImEwY2MiPjxyZWN0IHdpZHRoPSIxOSIgaGVpZ2h0PSIxMyIgeD0iMi41IiB5PSI1LjUiIHN0cm9rZT0iIzAwMUEzNCIgc3Ryb2tlLW9wYWNpdHk9Ii4xNiIgb3BhY2l0eT0iLjc1IiByeD0iMi41Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0zIDhhMiAyIDAgMCAxIDItMmgxNGEyIDIgMCAwIDEgMiAydjJIM3oiLz48cGF0aCBmaWxsPSIjMDA1NUNDIiBkPSJNMyAxMGgxOHY0SDN6Ii8+PHBhdGggZmlsbD0iI0YwMTIxRiIgZD0iTTMgMTRoMTh2MmEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnoiLz48L3N2Zz4=">
+                            <span>+7</span>
+                            <img alt=""
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgY2xhc3M9ImUzMDAtYjgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0ibTQgNiA0IDUgNC01eiIvPjwvc3ZnPg==">
+                        </div>
+                        <input required class="authorization_input_phone" type="text" autocomplete="off"
+                            placeholder="999 999 99 99">
+                    </div>
+                    <button type="submit" class="authorization_button">Войти</button>
+                    <div class="authorization_section_block_or">&nbsp;&nbsp;или&nbsp;&nbsp;</div>
+                    <a href="#" class="authorization_button_gos">
+                        <img alt=""
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgY2xhc3M9ImIyMDAtYjAiPjxwYXRoIGZpbGw9InVybCgjaWNfbV9tdWx0aWNvbG9yX2dvc3VzbHVnaV9maWxsZWRfX2EpIiBkPSJNMTQuNTEgMi40ODZDMTMuNjY2IDIuMjA0IDEyLjc4OCAyIDEyIDJzLTEuNjY2LjIwNC0yLjUxLjQ4NmMtLjg1Ny4yODctMS43NDMuNjc3LTIuNTY0IDEuMDk5YTIwIDIwIDAgMCAwLTIuMjMyIDEuMzIzYy0uNjA5LjQyLTEuMTcyLjg3NS0xLjQ5MSAxLjI5Mi0uNTg1Ljc2My0uODY5IDEuNzQyLTEuMDIgMi43MUMyLjAzIDkuODkyIDIgMTAuOTcgMiAxMnMuMDMgMi4xMDguMTgzIDMuMDljLjE1MS45NjguNDM1IDEuOTQ3IDEuMDIgMi43MS4zMi40MTcuODgyLjg3MiAxLjQ5MSAxLjI5Mi42MzUuNDQgMS40MS45MDIgMi4yMzIgMS4zMjMuODIxLjQyMiAxLjcwNy44MTIgMi41NjQgMS4wOTkuODQ0LjI4MiAxLjcyMy40ODYgMi41MS40ODYuNzg4IDAgMS42NjYtLjIwNCAyLjUxLS40ODZhMTkgMTkgMCAwIDAgMi41NjQtMS4wOTkgMjAgMjAgMCAwIDAgMi4yMzItMS4zMjNjLjYwOS0uNDIgMS4xNzItLjg3NSAxLjQ5MS0xLjI5Mi41ODUtLjc2My44NjktMS43NDIgMS4wMi0yLjcxLjE1My0uOTgyLjE4My0yLjA2LjE4My0zLjA5cy0uMDMtMi4xMDgtLjE4My0zLjA5Yy0uMTUxLS45NjgtLjQzNS0xLjk0Ny0xLjAyLTIuNzEtLjMyLS40MTctLjg4Mi0uODcyLTEuNDkxLTEuMjkyYTIwIDIwIDAgMCAwLTIuMjMyLTEuMzIzIDE5IDE5IDAgMCAwLTIuNTY0LTEuMDk5TTMgMTBhMSAxIDAgMCAxIDEtMWg1YTEgMSAwIDAgMSAwIDJINGExIDEgMCAwIDEtMS0xbTAgNGExIDEgMCAwIDEgMS0xaDExYTEgMSAwIDEgMSAwIDJINGExIDEgMCAwIDEtMS0xIi8+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJpY19tX211bHRpY29sb3JfZ29zdXNsdWdpX2ZpbGxlZF9fYSIgeDE9IjEyIiB4Mj0iMTIiIHkxPSI0IiB5Mj0iMjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMkE2NEFFIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRjE0MDVBIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+">
+                        &nbsp;&nbsp;Вход через Госуслуги</a>
+                    <a href="#" class="authorization_button_email">Войти по почте</a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_links">
+                    <div class="footer_links_text">
+                        <a href="#">Что такое Ozon ID?</a>
+                    </div>
+                    <div class="footer_links_text">
+                        <a href="#">Помощь покупателю</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
